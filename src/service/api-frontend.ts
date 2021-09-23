@@ -28,4 +28,19 @@ class ApiFrontend extends IAPI {
     }
 }
 
+// save todos to local storage
+export const saveLocalTodos = (todos: Todo[]) => {
+    localStorage.setItem("todos", JSON.stringify(todos))
+}
+
+// retrive todos from local storage
+export const getLocalTodos = () => {
+    if (localStorage.getItem("todos") === null) {
+        localStorage.setItem("todos", JSON.stringify([]))
+    } else {
+        let todoLocal = JSON.parse(localStorage.getItem("todos") || '[]')
+        return todoLocal
+    }
+}
+
 export default new ApiFrontend();

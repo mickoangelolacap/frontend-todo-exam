@@ -1,0 +1,42 @@
+/* Screens larger than 1920 x 1080 */
+@media only screen and (min-width : 1921px) {
+
+}
+/* 1680 x 1050 Desktop */
+@media only screen and (max-width : 1680px) {
+    
+}
+/* 1366 x 768 Desktop */
+@media only screen and (max-width : 1366px) {
+    
+}
+/* Ipad Pro */
+@media only screen and (max-width : 1024px) {
+    #signInPage {
+        .container {
+            width: 50%;
+        }
+    }
+    #todoPage {
+        .container {
+            width: 70%;
+        }
+    }
+}
+/* Ipad */
+@media only screen and (max-width : 768px) {
+
+}
+/* Mobile */
+@media only screen and (max-width : 480px) {
+    #signInPage {
+        .container {
+            width: 90%;
+        }
+    }
+    #todoPage {
+        .container {
+            width: 90%;
+        }
+    }
+}

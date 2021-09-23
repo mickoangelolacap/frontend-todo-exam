@@ -2,19 +2,21 @@ import React from 'react';
 
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
-import SignInPage from './SignInPage';
-import ToDoPage from './ToDoPage';
+import Header from './components/Header';
+import SignInPage from './components/SignInPage';
+import ToDoPage from './components/ToDoComponents/ToDoPage';
 
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
     <main className="App">
       <BrowserRouter>
-        <Switch>
-          <Route path="/" exact component={SignInPage}/>
-          <Route path="/todo" component={ToDoPage}/>
-        </Switch>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={SignInPage}/>
+            <Route path="/todo" component={ToDoPage}/>
+          </Switch>
       </BrowserRouter>
     </main>
   );

@@ -1,0 +1,157 @@
+#todoPage {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10em;
+    .container {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .timeDateContainer {
+        width: 100%;
+        text-align: left;
+        padding-bottom: 3em;
+        .time {
+            font-size: 5em;
+            font-weight: 700;
+        }
+        .greetings {
+            font-size: 2em;
+            font-weight: 700;
+            padding-bottom: .5em;
+        }
+        .date {
+            font-weight: 100;
+            padding-left: .5em;
+            color: rgba($color: $secondary, $alpha: .5);
+        }
+    }
+}
+// TodoInput
+#todoInput {
+    font-size: 1.6rem;
+    width: 100%;
+    .inputContainer {
+        display: flex;
+    }
+    input {
+        @extend %inputText;
+    }
+    .addTask {
+        font-size: 3em;
+        color: $accent;
+        background-color: unset;
+        border: unset;
+        cursor: pointer;
+        padding-left: .5em;
+        &:hover {
+            color: rgba($color: $accent, $alpha: .5)
+        }
+        &:active {
+            color: rgba($color: $accent, $alpha: 1)
+        }
+    }
+}
+// TodoItems
+#todoList {
+    font-size: 1.6rem;
+    padding-top: 2em;
+    width: 100%;
+    .noteContainer {
+        padding-bottom: 2em;
+        .note {
+            font-weight: 100;
+            color: $accent;
+        }
+    }
+    .todoItem {
+        display: flex;
+        align-items: center;
+        padding: 1.5em;
+        border-bottom: 1px solid rgba($color: $secondary, $alpha: .2);
+        &:hover {
+            background-color: #222;
+        }
+        input[type="checkbox"] {
+            @extend %inputCheckbox;
+            &:checked ~ .todoSpan{
+                text-decoration: line-through;
+                color: $accent;
+            }
+        }
+        .todoSpan {
+            width: 100%;
+        }
+        .deleteTask {
+            @extend %todoIcons;
+        }
+        .editTodoItem {
+            display: flex;
+            width: 100%;
+            input[type="text"] {
+                font-size: 1em;
+                width: 100%;
+                color: $secondary;
+                background-color: unset;
+                border: unset;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .submitEdit, .cancelEdit{
+                @extend %todoIcons;
+                padding-right: 1em;
+            }
+        }
+    }
+}
+// Todo Toolbar
+#todoToolbar {
+    width: 100%;
+    .toolBarShow {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5em;
+        margin-top: 1em;
+    }
+    .checkStatusContainer {
+        display: flex;
+        input {
+            @extend %inputCheckbox
+        }
+        .statusSelector {
+            font-size: 1em;
+            background-color: unset;
+            color: $secondary;
+            border: unset;
+            border-bottom: 1px solid rgba($color: $secondary, $alpha: .2);
+            cursor: pointer;
+            option {
+                background-color: $primary;
+                color: $secondary;
+                padding: 1em;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    .clearTasks {
+        font-size: 1em;
+        background-color: unset;
+        border: unset;
+        color: $secondary;
+        cursor: pointer;
+        &:hover {
+            color: $accent;
+        }
+    }
+}
+
+

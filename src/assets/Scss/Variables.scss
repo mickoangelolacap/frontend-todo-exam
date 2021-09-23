@@ -1,0 +1,45 @@
+// Color Scheme
+$primary : #333;
+$secondary : #f9f6ef;
+$accent : #faa307;
+
+%todoIcons {
+    font-size: 1.5em;
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+    color: rgba($color: $secondary, $alpha: .5);
+    &:hover {
+        color: rgba($color: $accent, $alpha: 1);
+    }
+}
+
+%inputCheckbox {
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid $secondary;
+    border-radius: 5px;
+    margin-right: 2em;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    &:checked {
+        background-color: $accent;
+    }
+}
+
+%inputText {
+    width: 100%;
+    color: $secondary;
+    font-size: 1em;
+    padding: 2em .5em;
+    background-color: unset;
+    border: unset;
+    border-bottom: 2px solid rgba($color: $secondary, $alpha: .5);
+    &:hover {
+        background-color: #222;
+    }
+    &:focus {
+        outline: none;
+    }
+}
